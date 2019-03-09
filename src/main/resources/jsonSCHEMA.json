@@ -1,0 +1,82 @@
+{"$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Квітка",
+  "description": "Якась квітка",
+  "type": "object",
+  "properties": {
+    "name":{
+      "description": "Назва рослини",
+      "type": "string"
+    },
+    "soil":{
+      "description": "Земля для садіння",
+      "type": "string",
+      "enum": ["підзолиста", "ґрунтова", "дерново-підзолиста"]
+    },
+    "origin":{
+      "description": "Місце походження рослини",
+      "type": "string"
+    },
+    "visual_parameters":{
+      "description": "Зовнішні параметри",
+      "type": "object",
+      "properties": {
+        "stem_color":{
+          "description": "Колір стебла",
+          "type": "string"
+        },
+        "leaf_color":{
+          "description": "Колір листків",
+          "type": "string"
+        },
+        "plant_average_size":{
+          "description": "Середній розмір рослини",
+          "type": "number",
+          "minimum":1
+        }
+      },
+      "required": [
+        "stem_color",
+        "leaf_color",
+        "plant_average_size"
+      ]
+    },
+    "growing_tips":{
+      "description": "Оптимальні умови вирощування:",
+      "type": "object",
+      "properties": {
+        "temperature":{
+          "description": "температура (в градусах),",
+          "type": "number",
+          "minimum":1
+        },
+        "light":{
+          "description": "освітлення (любить світло чи ні)",
+          "type": "boolean"
+        },
+        "watering":{
+          "description": "полив (мл на тиждень)",
+          "type": "integer",
+          "minimum":1
+        }
+      },
+      "required": [
+        "temperature",
+        "light",
+        "watering"
+      ]
+    },
+    "multiplying":{
+      "description": "Розмноження",
+      "type": "string",
+      "enum": ["листками", "живцями", "насінням"]
+    }
+  },
+  "required": [
+    "name",
+    "soil",
+    "origin",
+    "visual_parameters",
+    "growing_tips",
+    "multiplying"
+  ]
+}

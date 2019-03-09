@@ -1,0 +1,34 @@
+[
+  {
+    "name":"Рослина1",
+    "soil":"дерново-підзолиста",
+    "origin":"Якесь місце походження рослини",
+    "visual_parameters":{
+      "stem_color":"зелений",
+      "leaf_color":"червоний",
+      "plant_average_size":10.0
+    },
+    "growing_tips":{
+      "temperature":36.6,
+      "light":true,
+      "watering":100
+    },
+    "multiplying":"живцями"
+  },
+  {
+    "name":"Рослина2",
+    "soil":"дерново-підзолиста",
+    "origin":"Якесь інше місце походження рослини",
+    "visual_parameters":{
+      "stem_color":"блакитний",
+      "leaf_color":"рожевий",
+      "plant_average_size":100.0
+    },
+    "growing_tips":{
+      "temperature":46.5,
+      "light":false,
+      "watering":500
+    },
+    "multiplying":"живцями"
+  }
+]
